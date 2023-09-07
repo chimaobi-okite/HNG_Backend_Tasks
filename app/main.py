@@ -4,6 +4,11 @@ from app import schemas, utils
 
 app = FastAPI()
 
+@app.get("/")
+def root():
+    return {"message": "Hey, root workinh correctly"}
+
+
 def get_file_paths():
     github_repo_url = utils.GITHUB_REPO_URL
     current_file_path = os.path.abspath(__file__)
