@@ -15,12 +15,10 @@ def get_file_paths():
     
 
 @app.get("/", status_code=status.HTTP_200_OK, response_model=schemas.Information)
-async def get_information(slack_name:str, track:str):
+def get_information(slack_name:str, track:str):
     github_repo_url, github_file_url = get_file_paths()
     utc_time, current_day = utils.get_utc_time_day()
     information = schemas.Information(slack_name=slack_name, current_day=current_day, utc_time=utc_time,
                                       track=track,github_file_url=github_file_url,github_repo_url=github_repo_url, status_code=200)
     return information
-
-    
-    
+  

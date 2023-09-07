@@ -12,3 +12,4 @@ class Information(BaseModel):
     github_file_url: str
     github_repo_url: str
     status_code: int
+    
