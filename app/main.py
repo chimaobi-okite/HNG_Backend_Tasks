@@ -1,6 +1,5 @@
 from fastapi import FastAPI, Response, status, HTTPException
 from app import schemas, utils
-from datetime import datetime
 
 app = FastAPI()
 
