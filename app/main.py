@@ -14,7 +14,7 @@ def get_file_paths():
     return github_repo_url, github_file_url
     
 
-@app.get("/", status_code=status.HTTP_200_OK, response_model=schemas.Information)
+@app.get("/api", status_code=status.HTTP_200_OK, response_model=schemas.Information)
 def get_information(slack_name:str, track:str):
     github_repo_url, github_file_url = get_file_paths()
     utc_time, current_day = utils.get_utc_time_day()
