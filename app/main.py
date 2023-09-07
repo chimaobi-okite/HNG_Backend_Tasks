@@ -1,11 +1,11 @@
 import os
-from fastapi import FastAPI, Response, status, HTTPException
-from app import schemas, utils, config
+from fastapi import FastAPI, status
+from app import schemas, utils
 
 app = FastAPI()
 
 def get_file_paths():
-    github_repo_url = config.GITHUB_REPO_URL
+    github_repo_url = utils.GITHUB_REPO_URL
     current_file_path = os.path.abspath(__file__)
     relative_path = os.path.relpath(current_file_path)
     repo_path = os.path.join(github_repo_url, "blob/main/")

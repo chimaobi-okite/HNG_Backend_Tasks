@@ -1,1 +1,0 @@
-GITHUB_REPO_URL = "https://github.com/chimaobi-okite/HNG_Task_1"
