@@ -5,5 +5,5 @@ def get_utc_time_day():
     utc_time = datetime.utcnow()
     utc_time_formatted = utc_time.strftime('%Y-%m-%dT%H:%M:%SZ')
     day_int = datetime.utcnow().weekday()
-    week_day = days[day_int]
-    return utc_time_formatted, week_day
+    current_day = days[day_int]
+    return utc_time_formatted, current_day
